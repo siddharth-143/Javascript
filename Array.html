@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <script type="text/javascript">
+    
+        // Access the elemets of array 
+        var cars = ["Saab", "Volvo", "BMW"];
+        var name = cars[1];
+        document.write("<h2>" +name+"<br>");
+
+        // Access the full elemnts of array 
+        for (let i = 0; i < cars.length; i++) {
+            document.write("<h2>" +cars[i]+ "</h2></h2>");
+            
+        }
+
+        // The length property 
+        var fruits = ["Banana", "Orange", "Apple", "Mango"];
+        document.write("<h2>" + fruits.length);
+
+        // Looping array elements
+        var fruite1, text, fru_len, i;
+        fruite1 = ["Banana", "Orange", "Apple", "Mango", "Pineaoole"];
+        fru_len = fruite1.length;
+
+        text = "<ul>";
+        for (let i = 0; i < fru_len; i++) {
+            text += "<li>" +fruite1[i]+ "</li>";
+        }
+        text += "</ul>";
+        document.write(text)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
