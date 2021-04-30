@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback & Chaining</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <h2>Callback & Chaining Effects</h2>
+    <button id="btntoggle">Toggle</button>
+
+    <div id="firstdiv" class="mydivs">
+        <p>This is first paragraph in the first division</p>
+        <p>This is second paragraph in the first division</p>
+    </div>
+
+    <div id="seconddiv" class="mydivs">
+        <p>This is third paragraph in the second division</p>
+    </div>
+
+</body>
+<script src="js/jquery-3.6.0.js" type="text/javascript"></script>
+<script>
+    $(document).ready(function () {
+
+        function print_msg()
+        {
+            alert("effect done");
+        }
+
+        $("#btntoggle").click(function () {
+            $("#firstdiv").slideUp(2000).slideDown(2000).fadeOut(2000).fadeIn(3000, print_msg);
+        });
+
+    });
+</script>
+</html>
