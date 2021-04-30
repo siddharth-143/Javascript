@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse-Events</title>
+    <script type="text/javascript">
+        function set_new_image()
+        {
+            document.getElementById("img1").src = "solar.png";
+        }
+
+        function set_old_image()
+        {
+            document.getElementById("img1").src = "OIP.jpg";
+        }
+    </script>
+</head>
+<body>
+    <img id="img1" onmouseover="set_new_image()" onmouseout="set_old_image()" src="OIP.jpg">
+</body>
+</html> 

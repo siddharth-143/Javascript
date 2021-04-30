@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User-input-selectbox</title>
+    <script type="text/javascript">
+        function fn1()
+        {
+            var select = document.getElementById("selectbox");
+            alert(select.options[select.selectedIndex].value);
+        }
+    </script>
+</head>
+<body>
+    <select id="selectbox">
+        <option value="html">html</option>
+        <option value="Css">Css</option>
+        <option value="Javascript">javascript</option>
+    </select><br>
+    <br>
+    <button onclick="fn1()">Click me</button>
+</body>
+</html>

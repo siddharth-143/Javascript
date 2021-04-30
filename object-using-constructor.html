@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object-using-constructor</title>
+    <script type="text/javascript">
+    
+    // Using the object constructor function
+    function cars(cars_brand, car_model, prince) {
+        this.cars_brand = cars_brand;
+        this.car_model = car_model;
+        this.prince = prince;
+
+        this.tesla_auto_pilot = function() {
+            document.write("<h2> This car has auto pilot</h2>");
+        }
+    }
+
+    var c1 = new cars("Tesla", "Model 3", 3500);
+    var c2 = new cars("Tesla", "Model m", 45000);
+
+    c2.tesla_auto_pilot();
+    
+    // Accessing object properties
+    document.write("<h2>" +c2.car_model+ "</h2>");
+                    // or
+    document.write("<h2>" +c2["car_model"]+ "</h2>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

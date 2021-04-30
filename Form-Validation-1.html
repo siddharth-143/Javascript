@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Validation</title>
+    <script type="text/javascript">
+        function validate()
+        {
+            var Username = document.getElementById("uname");
+            var password = document.getElementById("pass");
+            if(Username.value.trim() == "")
+            {
+                //alert("Username can not be blank");
+                uname.style.border = "solid 1px red";
+                document.getElementById("lbuname1").style.visibility = "visible";
+                return false;
+            }
+            else if(password.value.trim() == "")
+            {
+                //alert("Password can not be blank");
+                pass.style.border = "solid 1px red";
+                document.getElementById("lbpass1").style.visibility = "visible";
+                return false;
+            }
+            else if(password.value.trim().length <= 5)
+            {
+                //alert("Password is to short..");
+                pass.style.border = "solid 1px red";
+                document.getElementById("lbpass2").style.visibility = "visible";
+                return false;
+            }
+            else
+            {
+                true
+            }
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit=" return validate()" action="Wel-come.html">
+
+        <input id="uname" type="text" placeholder="Username">
+        <label id="lbuname1" style="color: red; visibility: hidden;">Invalid</label>
+        <br><br>
+
+        <input id="pass" type="password" placeholder="Password"> 
+        <label id="lbpass1" style="color: red; visibility: hidden;">Invalid</label>
+        <label id="lbpass2" style="color: red; visibility: hidden;">Password to shot</label>
+        <br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

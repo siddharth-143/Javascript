@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+    <script type="text/javascript">
+    /*
+        \d - match any digit (equal to [0-9])
+        \w - match any word character (a-z, A-Z, 0-9, & __)
+        \s - match whitespace character (eg - space & tabs)
+        \t - match a tab only
+
+        ^ -> caret sign
+        [^] - caret inside square bracket consist of not starting requirement
+        ^[] - caret outside square bracket consists of starting requirement
+
+        $ - ending requirement 
+    */
+
+        function validate()
+        {
+            var text = document.getElementById("text1").value;
+          
+            var regx = /^[7-9]\d{9}$/; 
+            if(regx.test(text))
+            {
+                document.getElementById("lbltext").innerHTML="Valid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="green";
+            }
+            else
+            {
+                
+                document.getElementById("lbltext").innerHTML="Invalid";
+                document.getElementById("lbltext").style.visibility="visible";
+                document.getElementById("lbltext").style.color="red";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <input id="text1" placeholder="Cellphone" type="text"><br>
+        <label id="lbltext" style="color: red; visibility: hidden">Invalid Usernaem</label><br>
+
+        <button onclick="validate()" type="button">Submit</button>
+    </form>
+</body>
+</html>
